@@ -93,7 +93,7 @@ const dashboardRoutes = [
     component: NotificationsPage,
     layout: "/admin"
   },
-  {
+  /*{
     path: "/rtl-page",
     name: "RTL Support",
     rtlName: "پشتیبانی از راست به چپ",
@@ -108,7 +108,7 @@ const dashboardRoutes = [
     icon: Unarchive,
     component: UpgradeToPro,
     layout: "/admin"
-  }
+  }*/
 ];
 
 export default dashboardRoutes;

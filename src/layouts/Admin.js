@@ -52,9 +52,13 @@ export default function Admin({ ...rest }) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleImageClick = image => {
     setImage(image);
+    handleFixedClick();
+    setMobileOpen(true);
   };
   const handleColorClick = color => {
     setColor(color);
+    handleFixedClick();
+    setMobileOpen(true);
   };
   const handleFixedClick = () => {
     if (fixedClasses === "dropdown") {

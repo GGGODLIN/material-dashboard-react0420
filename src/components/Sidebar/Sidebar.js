@@ -51,7 +51,9 @@ export default function Sidebar(props) {
             activeClassName="active"
             key={key}
           >
-            <ListItem button className={classes.itemLink + listItemClasses} onClick={() => props.handleDrawerToggle()}>
+            <ListItem button className={classes.itemLink + listItemClasses} onClick={() => {
+              console.log(prop.layout + prop.path);
+              props.handleDrawerToggle();}}>
               {typeof prop.icon === "string" ? (
                 <Icon
                   className={classNames(classes.itemIcon, whiteFontClasses, {

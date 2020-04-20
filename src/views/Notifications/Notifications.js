@@ -23,11 +23,11 @@ const styles = {
       margin: "0",
       fontSize: "14px",
       marginTop: "0",
-      marginBottom: "0"
+      marginBottom: "0",
     },
     "& a,& a:hover,& a:focus": {
-      color: "#FFFFFF"
-    }
+      color: "#FFFFFF",
+    },
   },
   cardTitleWhite: {
     color: "#FFFFFF",
@@ -41,9 +41,9 @@ const styles = {
       color: "#777",
       fontSize: "65%",
       fontWeight: "400",
-      lineHeight: "1"
-    }
-  }
+      lineHeight: "1",
+    },
+  },
 };
 
 const useStyles = makeStyles(styles);
@@ -65,8 +65,8 @@ export default function Notifications() {
         window.clearTimeout(id);
       }
     };
-  });
-  const showNotification = place => {
+  },[]);
+  const showNotification = (place) => {
     switch (place) {
       case "tl":
         if (!tl) {
@@ -79,9 +79,10 @@ export default function Notifications() {
       case "tc":
         if (!tc) {
           setTC(true);
-          setTimeout(function() {
+          window.setTimeout(function() {
+            console.log("TIMES UP!");
             setTC(false);
-          }, 6000);
+          }, 600);
         }
         break;
       case "tr":
